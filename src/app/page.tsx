@@ -1,103 +1,168 @@
-import Image from "next/image";
+import { IoSearch } from "react-icons/io5";
+import { FaAmbulance } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="relative flex h-screen w-full overflow-hidden">
+      {/* Background Video */}
+      <video
+        src="/video.mp4"
+        className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        autoPlay
+        loop
+        muted
+      ></video>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="absolute top-0 left-0 w-full h-full z-15 pointer-events-none">
+        <div className="w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/70" />
+      </div>
+
+      <div className="menubar  z-20 w-full h-22 flex justify-between items-center transition-all duration-300 bg-transparent">
+        <div className="w-[15%]"></div>
+        <ul className="flex gap-4 font-semibold text-white relative  justify-center items-center w-[60%]">
+          <li className="relative group">
+            <span className="grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
+              Discover Medicent
+            </span>
+            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-white text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
+              <div className="p-10 grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
+                <div>
+                  <h3 className="font-bold mb-2">About Us</h3>
+                  <ul className="space-y-2">
+                    <li>Our Mission</li>
+                    <li>Leadership</li>
+                    <li>Careers</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-2">Campus</h3>
+                  <ul className="space-y-2">
+                    <li>Locations</li>
+                    <li>Virtual Tour</li>
+                    <li>Infrastructure</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-2">Community</h3>
+                  <ul className="space-y-2">
+                    <li>Initiatives</li>
+                    <li>Events</li>
+                    <li>Partners</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li className="relative group">
+            <span className="grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
+              Medical Services
+            </span>
+            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-white text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
+              <div className="p-10 grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
+                <div>
+                  <h3 className="font-bold mb-2">Departments</h3>
+                  <ul className="space-y-2">
+                    <li>Cardiology</li>
+                    <li>Neurology</li>
+                    <li>Orthopedics</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-2">Diagnostics</h3>
+                  <ul className="space-y-2">
+                    <li>Lab Tests</li>
+                    <li>Imaging</li>
+                    <li>Reports</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold mb-2">Support Services</h3>
+                  <ul className="space-y-2">
+                    <li>Emergency</li>
+                    <li>Pharmacy</li>
+                    <li>Rehabilitation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <img
+            src="/image.png"
+            alt="Logo"
+            className="w-28 h-20 cursor-pointer  transition duration-300"
+          />
+
+          {/* Other nav items */}
+          <li className="grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
+            Health Library
+          </li>
+          <li className="grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
+            Contact Us
+          </li>
+        </ul>
+
+        <div className="flex w-[15%] gap-4">
+          <div className="search bg-[#ff5100] h-8 w-8 rounded-full grid items-center justify-center">
+          <IoSearch className="text-white" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col  items-center">
+          <FaAmbulance className="text-orange-600" />
+          <span className="number text-[0.8rem] text-white">1066</span>
+        </div>
+
+        <li className=" language grid items-center">
+          <select
+            className="bg-transparent text-white outline-0   border-2 border-white px-2 py-1 rounded-lg transition duration-300"
+            defaultValue="en"
+          >
+            <option className="text-black" value="en">
+              English
+            </option>
+            <option className="text-black" value="hi">
+              Hindi
+            </option>
+            <option className="text-black" value="fr">
+              French
+            </option>
+            <option className="text-black" value="de">
+              German
+            </option>
+          </select>
+        </li>
+        </div>
+      </div>
+
+      <div className=" absolute bottom-0 left-0  bottompart h-42 w-full z-20 flex flex-col items-center justify-center">
+        <div className="w-[70%] relative h-14  grid items-center ">
+          <div className="absolute right-2  search bg-[#ff5100] h-8 w-8 rounded-full grid items-center justify-center">
+          <IoSearch className="text-white" />
+        </div>
+        <input type="search" name="text" id="" placeholder="Search for doctors & specialities...
+" className=" searchbar w-[100%] outline-0 border-2 border-blue-400 py-2 px-10 rounded-3xl focus:bg-white focus:border-0" />
+        </div>
+        <div className=" h-12 w-[70%] gap-1  flex rounded-l-full rounded-r-full border overflow-hidden">
+          <div className=" h-full w-[25.2%] bg-white flex gap-4 items-center justify-center  cursor-pointer " >
+            <h3 className="font-semibold">Book Appointment</h3>
+            <FaArrowRight />
+          </div>
+          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+            <h3 className="font-semibold">Book Appointment</h3>
+            <FaArrowRight />
+          </div>
+          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+            <h3 className="font-semibold">Book Appointment</h3>
+            <FaArrowRight />
+          </div>
+          <div className=" h-full w-[25%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+            <h3 className="font-semibold">Book Appointment</h3>
+            <FaArrowRight />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
