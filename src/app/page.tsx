@@ -8,14 +8,13 @@ export default function Home() {
       {/* Background Video */}
       <video
         src="/video.mp4"
-        className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover z-10 scale-[120%]"
         autoPlay
         loop
-        muted
       ></video>
 
       <div className="absolute top-0 left-0 w-full h-full z-15 pointer-events-none">
-        <div className="w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/70" />
+        <div className="w-full h-full bg-gradient-to-b from-black/90 via-transparent to-black/90" />
       </div>
 
       <div className="menubar  z-20 w-full h-22 flex justify-between items-center transition-all duration-300 bg-transparent">
