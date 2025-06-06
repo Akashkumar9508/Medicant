@@ -22,10 +22,10 @@ export default function Home() {
         <div className="w-[15%]"></div>
         <ul className="flex gap-4 font-semibold text-white relative  justify-center items-center w-[60%]">
           <li className="relative group">
-            <span className="grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
+            <span className="text-[1rem] text-transform: uppercase grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
               Discover Medicent
             </span>
-            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-white text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
+            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-[#fdf2ec] text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
               <div className="p-10 grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
                 <div>
                   <h3 className="font-bold mb-2">About Us</h3>
@@ -56,10 +56,10 @@ export default function Home() {
           </li>
 
           <li className="relative group">
-            <span className="grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
+            <span className=" text-[1rem] text-transform: uppercase grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
               Medical Services
             </span>
-            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-white text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
+            <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-[#fdf2ec] text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
               <div className="p-10 grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
                 <div>
                   <h3 className="font-bold mb-2">Departments</h3>
@@ -92,72 +92,87 @@ export default function Home() {
           <img
             src="/image.png"
             alt="Logo"
-            className="w-28 h-20 cursor-pointer  transition duration-300"
+            className="w-20 h-14 cursor-pointer  transition duration-300"
           />
 
           {/* Other nav items */}
-          <li className="grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
+          <li className="text-[1rem] text-transform: uppercase grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
             Health Library
           </li>
-          <li className="grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
+          <li className="text-[1rem] text-transform: uppercase grid items-center cursor-pointer px-4 py-2 hover:bg-white hover:text-black transition">
             Contact Us
           </li>
         </ul>
 
         <div className="flex w-[15%] gap-4">
           <div className="search bg-[#ff5100] h-8 w-8 rounded-full grid items-center justify-center">
-          <IoSearch className="text-white" />
-        </div>
+            <IoSearch className="text-white" />
+          </div>
 
-        <div className="flex flex-col  items-center">
-          <FaAmbulance className="text-orange-600" />
-          <span className="number text-[0.8rem] text-white">1066</span>
-        </div>
+          <div className="flex flex-col  items-center">
+            <FaAmbulance className="text-orange-600" />
+            <span className="number text-[0.8rem] text-white">1066</span>
+          </div>
 
-        <li className=" language grid items-center">
-          <select
-            className="bg-transparent text-white outline-0   border-2 border-white px-2 py-1 rounded-lg transition duration-300"
-            defaultValue="en"
-          >
-            <option className="text-black" value="en">
-              English
-            </option>
-            <option className="text-black" value="hi">
-              Hindi
-            </option>
-            <option className="text-black" value="fr">
-              French
-            </option>
-            <option className="text-black" value="de">
-              German
-            </option>
-          </select>
-        </li>
+          <li className=" language grid items-center">
+            <select
+              style={{
+                appearance: "none",
+                WebkitAppearance: "none",
+                MozAppearance: "none",
+                backgroundImage: `url("data:image/svg+xml;utf8,<svg fill='white' height='14' viewBox='0 0 24 24' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "right .7rem center", // Adjust this value to control margin
+                backgroundSize: "1rem",
+              }}
+              className="bg-transparent text-white outline-0 border-2 border-white px-4 py-1 rounded-[1.75rem] text-[0.8rem] transition duration-300 pr-7" // Make sure to leave enough space for the icon!
+              defaultValue="en"
+            >
+              <option className="text-black" value="en">
+                English
+              </option>
+              <option className="text-black" value="hi">
+                Hindi
+              </option>
+              <option className="text-black" value="fr">
+                French
+              </option>
+              <option className="text-black" value="de">
+                German
+              </option>
+            </select>
+          </li>
         </div>
       </div>
 
-      <div className=" absolute bottom-0 left-0  bottompart h-42 w-full z-20 flex flex-col items-center justify-center">
-        <div className="w-[70%] relative h-14  grid items-center ">
+      <div className=" absolute bottom-0 left-0  bottompart h-48 w-full z-20 flex flex-col items-center justify-center ">
+        <div className="w-[60%] relative h-14 mb-14 grid items-center ">
           <div className="absolute right-2  search bg-[#ff5100] h-8 w-8 rounded-full grid items-center justify-center">
-          <IoSearch className="text-white" />
+            <IoSearch className="text-white" />
+          </div>
+          <input
+            type="search"
+            name="text"
+            id=""
+            placeholder="Search for doctors & specialities...
+"
+            className=" searchbar w-[100%] outline-0 border-2 border-blue-400 py-2 px-10 rounded-3xl focus:bg-white focus:border-0"
+          />
         </div>
-        <input type="search" name="text" id="" placeholder="Search for doctors & specialities...
-" className=" searchbar w-[100%] outline-0 border-2 border-blue-400 py-2 px-10 rounded-3xl focus:bg-white focus:border-0" />
-        </div>
-        <div className=" h-12 w-[70%] gap-1  flex rounded-l-full rounded-r-full border overflow-hidden">
-          <div className=" h-full w-[25.2%] bg-white flex gap-4 items-center justify-center  cursor-pointer " >
+        <div className=" h-12 w-[60%] gap-1  flex rounded-l-full rounded-r-full border overflow-hidden">
+          <div className=" h-full w-[25.2%] bg-white flex gap-4 items-center justify-center  cursor-pointer ">
             <h3 className="font-semibold">Book Appointment</h3>
             <FaArrowRight />
           </div>
-          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer">
             <h3 className="font-semibold">Book Appointment</h3>
             <FaArrowRight />
           </div>
-          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+          <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer">
             <h3 className="font-semibold">Book Appointment</h3>
             <FaArrowRight />
           </div>
-          <div className=" h-full w-[25%] bg-white flex gap-4 items-center justify-center cursor-pointer" >
+          <div className=" h-full w-[25%] bg-white flex gap-4 items-center justify-center cursor-pointer">
             <h3 className="font-semibold">Book Appointment</h3>
             <FaArrowRight />
           </div>
