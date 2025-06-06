@@ -1,6 +1,8 @@
 import { IoSearch } from "react-icons/io5";
 import { FaAmbulance } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-full h-full object-cover z-10 scale-[120%]"
         autoPlay
         loop
+        muted
       ></video>
 
       <div className="absolute top-0 left-0 w-full h-full z-15 pointer-events-none">
@@ -22,7 +25,7 @@ export default function Home() {
         <ul className="flex gap-4 font-semibold text-white relative  justify-center items-center w-[60%]">
           <li className="relative group">
             <span className="text-[1rem] text-transform: uppercase grid items-center cursor-pointer px-4 py-2  hover:text-black transition">
-              Discover Medicent
+              Discover Medicant
             </span>
             <div className="fixed top-[88px] left-0 w-full h-[calc(60vh-88px)] bg-[#fdf2ec] text-black opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300 z-30">
               <div className="p-10 grid grid-cols-3 gap-6 max-w-screen-xl mx-auto">
@@ -161,19 +164,19 @@ export default function Home() {
         <div className=" h-12 w-[60%] gap-1  flex rounded-l-full rounded-r-full border overflow-hidden">
           <div className=" h-full w-[25.2%] bg-white flex gap-4 items-center justify-center  cursor-pointer ">
             <h3 className="font-semibold">Book Appointment</h3>
-            <FaArrowRight />
+            <IoArrowForwardCircleOutline className="text-3xl font-thin" />
           </div>
           <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer">
-            <h3 className="font-semibold">Book Appointment</h3>
-            <FaArrowRight />
+            <h3 className="font-semibold">Find Hospital</h3>
+            <IoArrowForwardCircleOutline className="text-3xl font-thin" />
           </div>
           <div className=" h-full w-[24.5%] bg-white flex gap-4 items-center justify-center cursor-pointer">
-            <h3 className="font-semibold">Book Appointment</h3>
-            <FaArrowRight />
+            <h3 className="font-semibold">Book Health Checkup</h3>
+            <IoArrowForwardCircleOutline className="text-3xl font-thin" />
           </div>
           <div className=" h-full w-[25%] bg-white flex gap-4 items-center justify-center cursor-pointer">
-            <h3 className="font-semibold">Book Appointment</h3>
-            <FaArrowRight />
+            <h3 className="font-semibold">Get Expert Opinion</h3>
+            <IoArrowForwardCircleOutline className="text-3xl font-thin" />
           </div>
         </div>
       </div>
